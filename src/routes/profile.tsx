@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-type Props = {};
+type Props = {
+    name: string;
+};
 
-export const Profile: React.FC<Props> = () => {
+export const Profile: React.FC<Props> = ({ name }) => {
     return (
         <div className="flex">
-            <div>Hallo</div>
+            <div>Hallo{name}</div>
             <div>Her er noe tekst</div>
         </div>
     );

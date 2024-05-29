@@ -1,9 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-type Props = {};
-
-export const Admin: React.FC<Props> = () => {
+export const Admin: React.FC = () => {
     return (
         <div className="flex flex-col">
             <div>Admin</div>

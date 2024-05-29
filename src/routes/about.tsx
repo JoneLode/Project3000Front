@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-type Props = {};
-
-export const About: React.FC<Props> = () => {
+export const About: React.FC = () => {
     return (
         <div className="flex">
             <div>About</div>
