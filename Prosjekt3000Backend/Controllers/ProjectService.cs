@@ -2,8 +2,6 @@
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
-
-
 namespace Prosjekt3000Backend.Controllers;
 
 public class ProjectService
@@ -11,16 +9,16 @@ public class ProjectService
   private readonly IMongoCollection<ProjectModel> _projectsCollection;
 
     public ProjectService(
-        IOptions<BookStoreDatabaseSettings> bookStoreDatabaseSettings)
+        IOptions<ProjectStoreDatabaseSettings> projectDatabaseSettings)
     {
         var mongoClient = new MongoClient(
-            bookStoreDatabaseSettings.Value.ConnectionString);
+            projectDatabaseSettings.Value.ConnectionString);
 
         var mongoDatabase = mongoClient.GetDatabase(
-            bookStoreDatabaseSettings.Value.DatabaseName);
+            projectDatabaseSettings.Value.DatabaseName);
 
         _projectsCollection = mongoDatabase.GetCollection<ProjectModel>(
-            bookStoreDatabaseSettings.Value.BooksCollectionName);
+            projectDatabaseSettings.Value.ProjectCollectionName);
     }
 
     public async Task<List<ProjectModel>> GetAsync() =>

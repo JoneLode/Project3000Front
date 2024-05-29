@@ -4,6 +4,8 @@ using System.Diagnostics;
 
 namespace Prosjekt3000Backend.Controllers;
 
+[ApiController]
+[Route("/[controller]")]
 public class HomeController : Controller
 {
 	private readonly ILogger<HomeController> _logger;
