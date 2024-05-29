@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 
-type Props = {};
-
-export const Menu: React.FC<Props> = () => {
+export const Menu: React.FC = () => {
     const navigate = useNavigate();
     return (
         <div className="w-full h-24 bg-orange-600">
