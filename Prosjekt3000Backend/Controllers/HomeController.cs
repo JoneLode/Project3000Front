@@ -30,8 +30,8 @@ public class HomeController : Controller
 	}
 
 	[HttpGet]
-	public IActionResult GetX()
+	public async Task<IActionResult> GetX()
 	{
-		return Ok("Hello World");
+		return Ok("hei");
 	}
 }
