@@ -38,14 +38,14 @@ public class ProjectController : Controller
     [HttpPut("{id:length(24)}")]
     public async Task<IActionResult> Update(string id, ProjectModel updatedProject)
     {
-        var book = await _projectService.GetAsync(id);
+        var project = await _projectService.GetAsync(id);
 
-        if (book is null)
+        if (project is null)
         {
             return NotFound();
         }
 
-        updatedProject.Id = book.Id;
+        updatedProject.Id = project.Id;
 
         await _projectService.UpdateAsync(id, updatedProject);
 
